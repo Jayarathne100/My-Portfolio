@@ -1,0 +1,80 @@
+/* 🌈 Container */
+.skill_container {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 60px 20px;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  overflow: hidden;
+}
+
+/* 🌟 Section Heading */
+.skill_main {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #15aabf, #4c6ef5, #ffd43b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 🧱 Grid for icons */
+.skill_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* 🎴 Each skill card (3D style) */
+.skill_card {
+  background: linear-gradient(145deg, #1a2a3a, #30475e);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.4),
+    inset 0 2px 10px rgba(255, 255, 255, 0.1);
+  transform: perspective(600px) rotateX(5deg);
+  transition: all 0.3s ease;
+}
+
+.skill_card:hover {
+  transform: perspective(600px) rotateX(0deg) scale(1.08);
+  box-shadow: 
+    0 10px 25px rgba(21, 170, 191, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* 🖼️ Skill icons */
+.skill_card img {
+  width: 90px;
+  height: 80px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skill_card:hover img {
+  transform: scale(1.15) rotateY(10deg);
+  filter: drop-shadow(0 0 15px rgba(255, 212, 59, 0.6));
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .skill_main {
+    font-size: 1.6rem;
+  }
+
+  .skill_card {
+    padding: 18px;
+  }
+
+  .skill_card img {
+    width: 70px;
+  }
+}

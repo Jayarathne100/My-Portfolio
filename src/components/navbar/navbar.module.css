@@ -1,0 +1,73 @@
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(90deg, #4c6ef5, #15aabf);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Individual nav buttons */
+.navBtn {
+  background: linear-gradient(120deg, #ffd43b, #ff7f50);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  text-align: center;
+}
+
+/* Hover animation */
+.navBtn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(120deg, #ff7f50, #ffd43b);
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .buttons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .navBtn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 668px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .navBtn {
+    width: 90%;
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 10px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  .navBtn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

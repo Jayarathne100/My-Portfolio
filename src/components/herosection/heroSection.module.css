@@ -1,0 +1,121 @@
+.heroSection_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  perspective: 1200px; /* enables 3D effect for children */
+  font-family: 'Poppins', sans-serif;
+}
+
+.heroSection_card {
+  background: linear-gradient(145deg, #ffffff, #f0f4ff);
+  border-radius: 25px;
+  padding: 50px;
+  max-width: 900px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+/* 3D Hover effect */
+.heroSection_card:hover {
+  transform: rotateY(8deg) rotateX(4deg) scale(1.03);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25),
+              inset 0 0 20px rgba(255,255,255,0.3);
+}
+
+.heroSection_intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #1a237e;
+  margin-bottom: 30px;
+  text-align: justify;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.heroSection_download {
+  text-align: center;
+}
+
+.heroSection_download button {
+  background: linear-gradient(120deg, #4c6ef5, #15aabf);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(21,171,191,0.4);
+  transition: all 0.4s ease;
+  transform: translateZ(10px);
+}
+
+.heroSection_download button:hover {
+  transform: scale(1.05) translateZ(20px);
+  background: linear-gradient(120deg, #15aabf, #4c6ef5);
+  box-shadow: 0 15px 35px rgba(16,47,185,0.5);
+}
+
+/* Light reflection effect on hover */
+.heroSection_card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.5), transparent);
+  transform: skewX(-25deg);
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+
+.heroSection_card:hover::after {
+  left: 150%;
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroSection_card {
+    padding: 40px;
+  }
+  .heroSection_intro {
+    font-size: 0.95rem;
+  }
+  .heroSection_download button {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection_container {
+    padding: 50px 15px;
+  }
+  .heroSection_card {
+    padding: 30px;
+  }
+  .heroSection_intro {
+    font-size: 0.9rem;
+  }
+  .heroSection_download button {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection_card {
+    padding: 25px;
+  }
+  .heroSection_intro {
+    font-size: 0.85rem;
+  }
+  .heroSection_download button {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+}

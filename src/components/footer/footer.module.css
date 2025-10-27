@@ -1,0 +1,79 @@
+.footer_container {
+  background: linear-gradient(135deg, #102fb9, #15aabf, #4c6ef5);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glowing overlay effect */
+.footer_container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 60%);
+  animation: glowRotate 12s linear infinite;
+  z-index: 0;
+}
+
+@keyframes glowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer_content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer_name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.footer_name span {
+  color: #ffd43b;
+  font-weight: 700;
+}
+
+.footer_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer_link {
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.footer_link:hover {
+  background: #ffd43b;
+  color: #102fb9;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(255, 212, 59, 0.6);
+}

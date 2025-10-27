@@ -1,0 +1,151 @@
+.contentSection_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  perspective: 1200px; /* Enables 3D effect */
+  font-family: 'Poppins', sans-serif;
+}
+
+.contentCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(145deg, #ffffff, #eef3ff);
+  border-radius: 25px;
+  padding: 50px;
+  max-width: 900px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+/* 3D Hover effect */
+.contentCard:hover {
+  transform: rotateY(8deg) rotateX(4deg) scale(1.03);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25),
+              inset 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* Profile Image */
+.imageContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(16, 47, 185, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.contentCard:hover .profileImage {
+  transform: scale(1.05) rotateZ(2deg);
+  box-shadow: 0 25px 50px rgba(16, 47, 185, 0.3);
+}
+
+/* Text Content */
+.textContent {
+  flex: 2;
+}
+
+.contentSection_title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1428a0;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  transition: all 0.5s ease;
+}
+
+.contentSection_title span {
+  font-weight: 700;
+  background: linear-gradient(90deg, #4c6ef5, #15aabf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Light reflection effect */
+.contentCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-25deg);
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+
+.contentCard:hover::after {
+  left: 150%;
+  opacity: 1;
+}
+
+/* Fade-in animation for titles */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contentCard {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .imageContent {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .profileImage {
+    width: 220px;
+    height: 220px;
+  }
+
+  .contentSection_title {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentCard {
+    padding: 30px;
+  }
+
+  .profileImage {
+    width: 180px;
+    height: 180px;
+  }
+
+  .contentSection_title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentCard {
+    padding: 20px;
+  }
+
+  .profileImage {
+    width: 140px;
+    height: 140px;
+  }
+
+  .contentSection_title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,71 @@
+.project_container {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 40px;
+}
+
+/* Section Titles */
+.project_uiux,
+.Project_front,
+.Project_fullstack {
+    color: #f9f9f9;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Project List Container */
+.project_row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* allows responsive wrapping on smaller screens */
+    justify-content: flex-start;
+}
+
+/* Individual Project Box */
+.project_box {
+    width: 420px;
+    /* fixed width box */
+    background-color: #f9f9f9;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project_box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.pdfButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.pdfButton:hover {
+    background-color: #0056b3;
+}
+
+.project_box a {
+    display: inline-block;
+    margin: 5px 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project_box a:hover {
+    text-decoration: underline;
+}
