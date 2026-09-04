@@ -1,0 +1,276 @@
+.footer {
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+  padding: 90px 7% 30px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #818cf8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.4rem, 2vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+}
+
+.title span {
+  color: #818cf8;
+}
+
+.description {
+  max-width: 700px;
+  margin: 25px auto 30px;
+  color: #161717;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   CONNECT BUTTON
+========================= */
+
+.connectButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 25px;
+
+  border-radius: 10px;
+
+  background: #6366f1;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.connectButton:hover {
+  background: #818cf8;
+  transform: translateY(-3px);
+}
+
+.connectButton span {
+  font-size: 1.15rem;
+}
+
+/* =========================
+   CONTACT CARDS
+========================= */
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  margin-top: 70px;
+}
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  min-height: 90px;
+  padding: 18px 20px;
+
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+
+  background: #111c31;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.contactCard:hover {
+  border-color: #6366f1;
+  background: #16213a;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #1e293b;
+  color: #818cf8;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  flex: 1;
+}
+
+.cardContent small {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.cardContent strong {
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* =========================
+   ARROW
+========================= */
+
+.arrow {
+  color: #64748b;
+  font-size: 1.2rem;
+
+  transition: all 0.3s ease;
+}
+
+.contactCard:hover .arrow {
+  color: #818cf8;
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 60px;
+  padding-top: 25px;
+
+  border-top: 1px solid #0f0f0f;
+
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.bottom p {
+  margin: 0;
+}
+
+.bottom strong {
+  color: #cbd5e1;
+}
+
+.bottom span {
+  color: #818cf8;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 70px 6% 25px;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 60px 20px 25px;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .description {
+    font-size: 0.92rem;
+  }
+
+  .connectButton {
+    width: 100%;
+  }
+
+  .contactCard {
+    min-height: 80px;
+    padding: 15px;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .cardContent strong {
+    font-size: 0.9rem;
+  }
+
+  .bottom {
+    font-size: 0.78rem;
+  }
+}

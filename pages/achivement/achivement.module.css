@@ -1,0 +1,266 @@
+
+.section {
+  padding: 100px 7%;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  color: #6366f1;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.title {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.title span {
+  color: #6366f1;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 18px auto 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   CERTIFICATE GRID
+========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  border-color: #c7d2fe;
+
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.imageWrapper {
+  position: relative;
+
+  height: 220px;
+
+  overflow: hidden;
+
+  background: #f1f5f9;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.card:hover .imageWrapper img {
+  transform: scale(1.04);
+}
+
+/* =========================
+   VIEW LABEL
+========================= */
+
+.viewLabel {
+  position: absolute;
+
+  right: 12px;
+  bottom: 12px;
+
+  padding: 7px 11px;
+
+  border-radius: 7px;
+
+  background: rgba(17, 24, 39, 0.9);
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  opacity: 0;
+
+  transform: translateY(5px);
+
+  transition: all 0.3s ease;
+}
+
+.card:hover .viewLabel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.cardContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding: 20px;
+}
+
+.number {
+  color: #6366f1;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.cardContent h2 {
+  margin: 0 0 5px;
+
+  color: #111827;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cardContent p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 55px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.footer span:nth-child(even) {
+  color: #cbd5e1;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .section {
+    padding: 70px 5%;
+  }
+
+  .header {
+    margin-bottom: 45px;
+  }
+
+  .title {
+    font-size: 31px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    height: 230px;
+  }
+
+  .viewLabel {
+    opacity: 1;
+    transform: none;
+  }
+
+  .footer {
+    text-align: center;
+    gap: 8px;
+  }
+}

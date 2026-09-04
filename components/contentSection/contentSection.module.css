@@ -1,0 +1,217 @@
+.contentSection_container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 7%;
+  background: #ffffff;
+}
+
+.contentCard {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.imageContent {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6,
+    #a855f7
+  );
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.textContent {
+  max-width: 680px;
+}
+
+.greeting {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #6366f1;
+}
+
+.name {
+  margin: 0;
+  font-size: clamp(2.5rem, 2vw, 4.2rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: #111827;
+}
+
+.rotatingTitle {
+  margin: 20px 0;
+  min-height: 45px;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: #374151;
+}
+
+.rotatingTitle span {
+  color: #6366f1;
+}
+
+.description {
+  max-width: 650px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #6b7280;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primaryButton {
+  color: #ffffff;
+  background: #6366f1;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  background: #4f46e5;
+}
+
+.secondaryButton {
+  color: #374151;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-3px);
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.primaryButton span,
+.secondaryButton span {
+  font-size: 1.1rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .contentSection_container {
+    padding: 70px 6%;
+  }
+
+  .contentCard {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    text-align: center;
+  }
+
+  .imageContent {
+    order: 1;
+  }
+
+  .textContent {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .description {
+    margin: 0 auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .imageWrapper {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contentSection_container {
+    padding: 50px 20px;
+  }
+
+  .imageWrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .name {
+    font-size: 2.3rem;
+    letter-spacing: -1px;
+  }
+
+  .rotatingTitle {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}

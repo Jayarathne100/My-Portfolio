@@ -1,0 +1,371 @@
+.educationSection {
+  padding: 100px 7%;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  max-width: 700px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.title {
+  margin: 0;
+
+  color: #111827;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.title span {
+  color: #6366f1;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 18px auto 0;
+
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+  position: relative;
+}
+
+/* Vertical line */
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 27px;
+
+  width: 1px;
+
+  background: #dbe3ef;
+}
+
+.timelineItem {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   TIMELINE MARKER
+========================= */
+
+.timelineMarker {
+  position: relative;
+  z-index: 2;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #c7d2fe;
+  border-radius: 14px;
+
+  background: #eef2ff;
+}
+
+.timelineMarker span {
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  padding: 28px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: #c7d2fe;
+
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.period {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: #6366f1;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card h2 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 21px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.card h3 {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+.completed {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.completed .statusDot {
+  background: #22c55e;
+}
+
+.ongoing {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.ongoing .statusDot {
+  background: #3b82f6;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+  max-width: 800px;
+  margin: 20px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 20px;
+  padding-top: 18px;
+
+  border-top: 1px solid #f1f5f9;
+}
+
+.highlights span {
+  padding: 7px 11px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+
+  background: #f8fafc;
+
+  color: #475569;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 55px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.footer span:nth-child(even) {
+  color: #cbd5e1;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .educationSection {
+    padding: 75px 5%;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+
+  .status {
+    align-self: flex-start;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+  .educationSection {
+    padding: 65px 5%;
+  }
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .title {
+    font-size: 31px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timelineItem {
+    grid-template-columns: 42px 1fr;
+    gap: 14px;
+  }
+
+  .timelineMarker {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+
+  .timelineMarker span {
+    font-size: 11px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card h3 {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
